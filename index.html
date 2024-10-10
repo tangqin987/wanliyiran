@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画里六安</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+    <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=H7SBZ-NGOLZ-WWIXK-ZIFPS-BUBK3-22FZA"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/10.5.27/jsrsasign-all-min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="图片\六安文旅LOGO\20221203105447305.jpg" alt="六安文旅LOGO" class="logo-img">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav me-3">
+                        <li class="nav-item"><a class="nav-link" href="#home">首页</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#attractions">景点介绍</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#culture">文化探索</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#travel-guide">旅游攻略</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">联系我们</a></li>
+                    </ul>
+                    <form class="d-flex" action="https://www.baidu.com/s" method="GET" target="_blank">
+                        <input class="form-control me-2" type="search" placeholder="搜索" aria-label="Search" name="wd">
+                        <button class="btn btn-outline-success" type="submit">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <main>
+            <section id="home">
+                <div class="swiper-container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="图片\画里六安-图片\1.jpg" alt="六安风光1">
+                                <div class="intro-overlay"></div>
+                            </div>
+                            <!-- 其他轮播图片也需要类似的结构 -->
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="intro-content">
+                        <h2>欢迎来到六安</h2>
+                        <p>六安，安徽省辖市，位于安徽西部，大别山腹地，是皖西政治、经济、文化中心。</p>
+                        <p>这里有秀美的自然风光，如天堂寨、万佛湖；有深厚的文化底蕴，如六安瓜片、皖西革命老区文化；还有独特的地方美食，如六安蒸鹅、六安蒸饺。</p>
+                        <p>来六安，感受大别山的雄奇壮美，品味六安茶的清香，探索红色文化的深邃，体验淳朴民风的温暖。</p>
+                    </div>
+                    <button id="viewMoreBtn" class="btn btn-primary view-more-photos">查看更多图片</button>
+                </div>
+            </section>
+
+            <section id="attractions" class="container mt-5">
+                <h2 class="text-center mb-4">著名景点</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="图片\画里六安-图片\6.jpg" class="card-img-top" alt="天堂寨">
+                            <div class="card-body">
+                                <h5 class="card-title">天堂寨</h5>
+                                <p class="card-text">国家AAAAA级旅游景区，集雄、奇、险、秀于一体。</p>
+                                <!-- 删除了 "查看更多图片" 按钮 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="图片\画里六安-图片\7.jpg" class="card-img-top" alt="万佛湖">
+                            <div class="card-body">
+                                <h5 class="card-title">万佛湖</h5>
+                                <p class="card-text">湖光山色交相辉映，被誉为'安徽的千岛湖'。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="图片\画里六安-图片\8.jpg" class="card-img-top" alt="六安茶谷">
+                            <div class="card-body">
+                                <h5 class="card-title">六安茶谷</h5>
+                                <p class="card-text">体验六安瓜片茶文化，感受茶乡魅力。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="culture" class="container mt-5">
+                <h2 class="text-center mb-4">文化探索</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <img src="图片\画里六安-图片\9.jpg" class="card-img-top" alt="皖西学院">
+                            <div class="card-body">
+                                <h5 class="card-title">皖西学院</h5>
+                                <p class="card-text">探索六安的文化教育中心，感受学术氛围。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <img src="图片\画里六安-图片\10.jpg" class="card-img-top" alt="六安博物馆">
+                            <div class="card-body">
+                                <h5 class="card-title">六安博物馆</h5>
+                                <p class="card-text">了解六安悠久的历史文化，欣赏珍贵文物。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="travel-guide" class="container mt-5">
+                <h2 class="text-center mb-4">旅游攻略</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="图片\画里六安-图片\11.jpg" class="card-img-top" alt="六安美食">
+                            <div class="card-body">
+                                <h5 class="card-title">六安美食</h5>
+                                <p class="card-text">品尝六安特色小吃，感受舌尖上的六安。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="图片\画里六安-图片\12.jpg" class="card-img-top" alt="六安住宿">
+                            <div class="card-body">
+                                <h5 class="card-title">六安住宿</h5>
+                                <p class="card-text">推荐舒适的住宿选择，让您在六安安心入住。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="图片\画里六安-图片\13.jpg" class="card-img-top" alt="六安交通">
+                            <div class="card-body">
+                                <h5 class="card-title">六安交通</h5>
+                                <p class="card-text">六安交通指南，助您轻松畅游六安。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="map" class="container mt-5">
+                <h2 class="text-center mb-4">景点地图</h2>
+                <div id="liuan-map" style="height: 400px;"></div>
+            </section>
+
+            <section id="official-links" class="container mt-5">
+                <h2 class="text-center mb-4">官方支持</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center">
+                        <a href="https://www.mct.gov.cn/" target="_blank" class="btn btn-outline-primary">文化和旅游部</a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="https://ct.ah.gov.cn/" target="_blank" class="btn btn-outline-primary">安徽省文化和旅游厅</a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="http://wlj.luan.gov.cn/" target="_blank" class="btn btn-outline-primary">六安市文化旅游局</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 在 footer 之前添加隐藏的图库 -->
+    <div id="hidden-gallery" style="display: none;">
+        <div id="liuan-scenery-gallery">
+            <a href="图片\画里六安-图片\1.jpg" data-lightbox="liuan-scenery" data-title="六安风光1">
+                <img src="图片\画里六安-图片\1.jpg" alt="六安风光1">
+            </a>
+            <a href="图片\画里六安-图片\2.jpg" data-lightbox="liuan-scenery" data-title="六安风光2">
+                <img src="图片\画里六安-图片\2.jpg" alt="六安风光2">
+            </a>
+            <!-- 添加更多图片，最多到 190.jpg -->
+        </div>
+    </div>
+
+    <footer class="bg-light mt-5 py-3">
+        <div class="container text-center">
+            <p>&copy; 2023 画里六安. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('viewMoreBtn').addEventListener('click', function() {
+            window.location.href = 'gallery.html'; // 确保路径正确
+        });
+    </script>
+    <script>
+        var map;
+
+        function initMap() {
+            var center = new qq.maps.LatLng(31.733064, 116.500654);
+            map = new qq.maps.Map(document.getElementById("liuan-map"), {
+                center: center,
+                zoom: 10
+            });
+
+            var landmarks = [
+                { name: "天堂寨", position: new qq.maps.LatLng(31.171721, 116.431881) },
+                { name: "万佛湖", position: new qq.maps.LatLng(31.748823, 116.669462) },
+                { name: "六安茶谷", position: new qq.maps.LatLng(31.762117, 116.505929) },
+                { name: "六安市区", position: new qq.maps.LatLng(31.733064, 116.500654) }
+            ];
+
+            landmarks.forEach(function(landmark) {
+                var marker = new qq.maps.Marker({
+                    position: landmark.position,
+                    map: map,
+                    title: landmark.name
+                });
+
+                var info = new qq.maps.InfoWindow({
+                    content: '<div style="text-align:center;white-space:nowrap;margin:10px;">' + landmark.name + '</div>'
+                });
+
+                qq.maps.event.addListener(marker, 'click', function() {
+                    info.open(map, this);
+                });
+            });
+        }
+
+        // 页面加载完成后初始化地图
+        window.onload = initMap;
+    </script>
+</body>
+</html>

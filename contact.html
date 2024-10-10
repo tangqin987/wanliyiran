@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 画里六安</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="图片\六安文旅LOGO\20221203105447305.jpg" alt="六安文旅LOGO" class="logo-img">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav me-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html#home">首页</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#attractions">景点介绍</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#culture">文化探索</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#travel-guide">旅游攻略</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">联系我们</a></li>
+                    </ul>
+                    <form class="d-flex" action="https://www.baidu.com/s" method="GET" target="_blank">
+                        <input class="form-control me-2" type="search" placeholder="搜索" aria-label="Search" name="wd">
+                        <button class="btn btn-outline-success" type="submit">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid mt-4">
+        <div class="rounded-image-container mb-4">
+            <img src="图片\画里六安-图片\186.jpg" alt="六安风光" class="rounded-image">
+            <div class="image-overlay">
+                <h1>联系我们</h1>
+                <p>欢迎来到六安市，获取更多资讯，感受我们的互动体验。</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="music-player">
+                    <h2>六安之声</h2>
+                    <div class="player-container">
+                        <audio id="audioPlayer" controls>
+                            您的浏览器不支持音频播放器。
+                        </audio>
+                        <div class="player-controls">
+                            <button id="playPauseBtn" class="btn btn-primary">播放/暂停</button>
+                            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+                            <select id="playMode" class="form-select">
+                                <option value="sequential">顺序播放</option>
+                                <option value="random">随机播放</option>
+                                <option value="loop">单曲循环</option>
+                            </select>
+                        </div>
+                    </div>
+                    <ul id="playlist" class="list-group mt-3">
+                        <!-- 播放列表将通过 JavaScript 动态添加 -->
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="news-section">
+                    <h2>最新动态</h2>
+                    <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- 新闻项将通过 JavaScript 动态添加 -->
+                        </div>
+                    </div>
+                    <a href="https://wlj.luan.gov.cn/zwzx/wlyw/index.html" target="_blank" class="btn btn-primary mt-3">更多新闻</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form mt-4">
+            <h2>留言板</h2>
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">姓名</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">邮箱</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">留言内容</label>
+                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">提交</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-light mt-4 py-3">
+        <div class="container text-center">
+            <p>&copy; 2023 画里六安. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
